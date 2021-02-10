@@ -5,9 +5,13 @@ stage('Checkout') {
  echo "Code Checout completed from Git"
 }
 stage('check condition') {
-    if(en.BRANCH_NAME == 'test')
-     echo "$BRANCH_NAME"
+    when {
+        expression { BRANCH_NAME == 'test' }
     }
+    steps {
+        echo "Condition executed"
+    }
+}
 stage('Compile') {
     sh 'ls -ltr && $pwd'
 }
