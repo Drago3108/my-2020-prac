@@ -32,7 +32,3 @@ def flavor(branchName) {
   assert matcher.matches()
   matcher[0][1]
 }
-Terms
-Privacy
-Security
-Status
