@@ -32,7 +32,6 @@ def flavor(branchName) {
   assert matcher.matches()
   matcher[0][1]
 }
-© 2021 GitHub, Inc.
 Terms
 Privacy
 Security
