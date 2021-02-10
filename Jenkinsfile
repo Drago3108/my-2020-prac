@@ -5,9 +5,8 @@ stage('Checkout') {
  echo "Code Checout completed from Git"
 }
 stage('check condition') {
-    when {
-        expression {
-            BRANCH_NAME == 'test' || BRANCH_NAME == 'master'
+    if(en.BRANCH_NAME == 'test')
+     echo "$BRANCH_NAME"
         }
     }
 }
